@@ -18,6 +18,15 @@
   return instance;
 }
 
+- (instancetype)init {
+  self = [super init];
+  if (self) {
+    _fadeDuration = 0.3;
+    _fadeDelay = 1;
+  }
+  return self;
+}
+
 + (void)registerSplashViewController:(UIViewController *)splashVC withWindow:(UIWindow *)window {
   RNSplashManager *mgr = [RNSplashManager sharedInstance];
   NSAssert(window.rootViewController, @"Must have a rootViewController already assigned.");
