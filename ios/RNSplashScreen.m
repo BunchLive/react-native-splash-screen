@@ -9,6 +9,7 @@
 
 #import "RNSplashScreen.h"
 #import <React/RCTBridge.h>
+#import "RNSplashManager.h"
 
 static bool waiting = true;
 static bool addedJsLoadErrorObserver = false;
@@ -34,8 +35,7 @@ RCT_EXPORT_MODULE(SplashScreen)
 
 + (void)showSplash:(NSString*)splashScreen inRootView:(UIView*)rootView {
     if (!loadingView) {
-        // loadingView = [[[NSBundle mainBundle] loadNibNamed:splashScreen owner:self options:nil] objectAtIndex:0];
-        loadingView = [[SplashViewController alloc] initWithNibName:@"SplashViewController" bundle:nil];
+         loadingView = [[[NSBundle mainBundle] loadNibNamed:splashScreen owner:self options:nil] objectAtIndex:0];
         CGRect frame = rootView.frame;
         frame.origin = CGPointMake(0, 0);
         loadingView.frame = frame;
@@ -46,6 +46,9 @@ RCT_EXPORT_MODULE(SplashScreen)
 }
 
 + (void)hide {
+    if ([RNSplashManager sharedInstance].splashVC) {
+        [RNSplashManager hideSplashVC];
+    }
     if (waiting) {
         dispatch_async(dispatch_get_main_queue(), ^{
             waiting = false;

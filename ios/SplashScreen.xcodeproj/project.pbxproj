@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D7682841D8E76D10014119E /* RNSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7682831D8E76D10014119E /* RNSplashScreen.m */; };
+		4F1FCEB721F132920030F2BF /* RNSplashManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1FCEB621F132920030F2BF /* RNSplashManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,8 @@
 		3D7682761D8E76B80014119E /* libSplashScreen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSplashScreen.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7682821D8E76D10014119E /* RNSplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSplashScreen.h; sourceTree = "<group>"; };
 		3D7682831D8E76D10014119E /* RNSplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSplashScreen.m; sourceTree = "<group>"; };
+		4F1FCEB521F132920030F2BF /* RNSplashManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNSplashManager.h; sourceTree = "<group>"; };
+		4F1FCEB621F132920030F2BF /* RNSplashManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNSplashManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +47,8 @@
 			children = (
 				3D7682821D8E76D10014119E /* RNSplashScreen.h */,
 				3D7682831D8E76D10014119E /* RNSplashScreen.m */,
+				4F1FCEB521F132920030F2BF /* RNSplashManager.h */,
+				4F1FCEB621F132920030F2BF /* RNSplashManager.m */,
 				3D7682771D8E76B80014119E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F1FCEB721F132920030F2BF /* RNSplashManager.m in Sources */,
 				3D7682841D8E76D10014119E /* RNSplashScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
